@@ -1,99 +1,399 @@
-<html lang="pt/br">
-<script language=javascript>document.write(unescape('%3C%68%65%61%64%3E%0A%20%20%20%20%3C%6D%65%74%61%20%63%68%61%72%73%65%74%3D%22%55%54%46%2D%38%22%3E%0A%20%20%20%20%3C%6D%65%74%61%20%6E%61%6D%65%3D%22%76%69%65%77%70%6F%72%74%22%20%63%6F%6E%74%65%6E%74%3D%22%77%69%64%74%68%3D%64%65%76%69%63%65%2D%77%69%64%74%68%2C%20%69%6E%69%74%69%61%6C%2D%73%63%61%6C%65%3D%31%2E%30%22%3E%0A%20%20%20%20%3C%74%69%74%6C%65%20%63%6C%61%73%73%3D%22%74%69%74%6C%65%22%3E%71%75%65%72%69%64%69%6E%68%61%73%3C%2F%74%69%74%6C%65%3E%0A%20%20%20%20%3C%6C%69%6E%6B%20%72%65%6C%3D%22%69%63%6F%6E%22%20%68%72%65%66%3D%22%68%74%74%70%73%3A%2F%2F%63%64%6E%2E%64%69%73%63%6F%72%64%61%70%70%2E%63%6F%6D%2F%65%6D%6F%6A%69%73%2F%39%36%36%31%32%31%35%32%36%32%33%37%37%35%33%33%38%34%2E%67%69%66%22%3E%0A%20%20%20%20%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%65%65%74%22%20%68%72%65%66%3D%22%63%73%73%2F%61%6C%6C%2E%6D%69%6E%2E%63%73%73%22%3E%0A%20%20%20%20%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%65%65%74%22%20%68%72%65%66%3D%22%63%73%73%2F%73%74%79%6C%65%2E%63%73%73%22%3E%0A%20%20%20%20%20%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%65%65%74%22%20%68%72%65%66%3D%22%63%73%73%2F%6D%61%69%6E%2E%63%73%73%22%3E%0A%20%20%20%20%20%3C%73%63%72%69%70%74%20%73%72%63%3D%22%62%6C%6F%63%6B%65%72%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E%0A%20%20%20%20%20%3C%73%63%72%69%70%74%20%73%72%63%3D%22%74%65%6E%74%61%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E%0A%3C%2F%68%65%61%64%3E'))</script>
-<body>
-<script>
-  function audioPlay() {
-      var audio = document.getElementById("audio");
-      audio.volume = 0.5;
-            audio.currentTime = 0;
-      audio.play();
+<!DOCTYPE html><html lang="Pt-br"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <meta name="theme-color" content="#E1E1E6">
+    <meta property="og:image" content="images/1.gif">
+    <link rel="shortcut icon" href="images/1.gif" type="image/gif">
+    <meta property="og:title" content="fofinhos &amp; abusadinhos">
+    <meta property="og:description" content="Akira &amp; Hwk">    
+<style>
+    
+@import url('css/css2_1.css');
+@import url('css/css2.css');
+
+
+
+body { 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: url(images/4.jpg);
+  background-size : cover;
+  background-position: center;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.profile {
+    width: 340px;
+    overflow: hidden;
+    background: #18191c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.profilerep7 { 
+    width: 340px;
+    overflow: hidden;
+    background: #18191c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+
+
+.banner img { 
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+.bannerep7 img { 
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+.pfp img { 
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -75px;
+    display: block;
+    margin-left: 25px;
+    margin-right: auto;
+    border-radius: 100px;
+    border: 11px solid #202124;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+.pfprep7 img { 
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -75px;
+    display: block;
+    margin-left: 25px;
+    margin-right: auto;
+    border-radius: 100px;
+    border: 11px solid #202124;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+
+.pfp img:hover { 
+    transform: scale(1.1);
+}
+
+.pfprep7 img:hover { 
+    transform: scale(1.1);
+}
+
+.profile__content h3 { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 7%;
+    margin-right: auto;
+    text-align: start;
+
+
+}
+
+.profile__content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 7%;
+    margin-right: auto;
+    text-align: start;
+
+
+}
+
+.profile__tag{
+        color: #E1E1E6;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: start;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 7%;
+        margin-right: auto;
+}
+
+.profile__tag {
+        color: #E1E1E6;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: start;
+}
+.profile__content p { 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 7%;
+    text-align: start;
+}
+
+.profile__content p { 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 7%;
+    text-align: start;
+}
+
+.aboutme__title { 
+    font-weight: 700;
+}
+
+.aboutme__title{ 
+    font-weight: 700;
+}
+
+.socials { 
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.socials { 
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.socials a { 
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0 14px;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+.socials a { 
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0 14px;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+.socials a:hover { 
+    transform: scale(1.2);
+}
+
+.socials a:hover { 
+    transform: scale(1.2);
+}
+
+.projects__button { 
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.projects__button a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: white;
+    color: #EC00FF;
+    border-radius: 15px;
+    padding: 0 14px;
+    transition: ease-in-out 0.3s;
+}
+
+.projects__button a:hover {
+    font-size: 19px;
+}
+
+.projects__buttonrep7 { 
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.projects__buttonrep7 a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: white;
+    color: #EC00FF;
+    border-radius: 15px;
+    padding: 0 14px;
+    transition: ease-in-out 0.3s;
+}
+
+.projects__buttonrep7 a:hover {
+    font-size: 19px;
+}
+
+
+  @media (max-width: 800px) {
+   .profilerep7{
+  position: absolute;
+  
+  margin-top: 300px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+
+   .profilerep7{
+    top: 50%;
+    left: 15px;
+}
+    }
   }
-</script>
+</style><title>hos</title></head>
+  
+<body>
 
-<audio loop preload="auto" id="audio">
-  <source src="r.mp3" type="audio/mpeg">
-</audio>
+<div class="profile animate__animated animate__fadeInUp animate__fast">
+        <div class="banner">
+        <div class="banner">
+             <img src="images/2.jpg">  
+        </div>
+        </div>
+        <div class="pfp">
+            <a href="https://api.betrayed.cc/socials/73598582153805824" target="_blank">
+        <img src="images/1.png" alt="nnz">
+            </a>
+        </div>
 
-<input type="checkbox" autocomplete="off" id="overlay-toggle">
-<div class="overlay fullscreen">
-  <label for="overlay-toggle" onclick="audioPlay(); ">
-    <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">aperta aí virgem</span>
-    <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">aperta aí virgem</span>
-  </label>
-</div>
-<video autoplay loop muted>
-    <source src="r.mp4">
-</video>
-<div class="container">
-     <div class="profile">
-     <div class="img"> <img class="orep7" data-user-id="962788138550435892" src="imagens/less.jpg"> </div>
-     <div class="rep7" data-user-id="962788138550435892"></div>
-     <div class="rep7 irep7" data-user-id="962788138550435892"></div>
-       <h1> 
-         <p style="font-size: 30px;">
-    less
-       </h1>
-     <div class="badges">
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Rep7/badges/main/svg/discordnitro.svg');" data-tooltip="Assinante desde 22 de out. de 2023"></div>
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Rep7/badges/main/svg/boosts/discordboost1.svg');" data-tooltip="Impulsionando o servidor desde 22 de out. de 2023"></div>
-     </div>
-    <div class="social-buttons">
-        <a href="https://www.instagram.com/drzz.drlx/" target="_blank" class="social-button"> <i class="fab fa-instagram social-icon"></i> </a>
-    </div>
-    <div class="7button">
-     <div class="7button-text">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</div>
-    </div>
-    </div>
-      </div>
 
-    <div class="container">
-     <div class="profile">
-     <div class="img"> <img class="orep7" data-user-id="757623839227117620" src="imagens/morenic.jpg"> </div>
-     <div class="rep7" data-user-id="757623839227117620"></div>
-     <div class="rep7 irep7" data-user-id="757623839227117620"></div>
-       <h1> 
-         <p style="font-size: 30px;">
-    morenic
-       </h1>
-     <div class="badges">
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Rep7/badges/main/svg/discordnitro.svg');" data-tooltip="Assinante desde 25 de set. de 2023"></div>
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Rep7/badges/main/svg/boosts/discordboost1.svg');" data-tooltip="Impulsionando o servidor desde 29 de out. de 2023"></div>
 
-     </div>
-    <div class="social-buttons">
-        <a href="https://instagram.com/eobiel.1bala/" target="_blank"
-class="social-button"> <i class="fab fa-instagram social-icon"></i> </a>
-    </div>
-    <div class="7button">
-     <div class="7button-text">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</div>
-    </div>
-    </div>
-      </div>
+<div class="profile__content animate__animated animate__fadeInUp animate__fast">
+<h3> 7
+</h3>
+  <span class="profile__tag">@tomouscamm</span>
+            <p> <span class="aboutme__title"></span> <br> <br> <span class="aboutme__text"></span></p>
+        </div>
 
-    <div class="container">
-     <div class="profile">
-     <div class="img"> <img class="orep7" data-user-id="1075163163047243929" src="imagens/testess.jpg"> </div>
-     <div class="rep7" data-user-id="1075163163047243929"></div>
-     <div class="rep7 irep7" data-user-id="1075163163047243929"></div>
-       <h1> 
-         <p style="font-size: 20px;">
-    1800d
-       </h1>
-     <div class="badges">
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Rep7/badges/main/svg/discordnitro.svg');" data-tooltip="Assinante desde 25 de out. de 2023"></div>
-         <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Mattlau04/Discord-SVG-badges/master/PNG/boost12month.png');"
-       <div class="badge" style="background-image: url('https://raw.githubusercontent.com/Mattlau04/Discord-SVG-badges/master/PNG/Bug_Hunter_level2.png');
-           data-tooltip="Impulsionando o servidor desde 5 de nov. de 2023"></div>
-     </div>
-    <div class="social-buttons">
-        <a href="https://instagram.com/330sxx/" target="_blank" class="social-button"> <i class="fab fa-instagram social-icon"></i> </a>
+
+        <div class="socials animate__animated animate__fadeInUp animate__fast">
+            
+            <a target="_blank" href="https://discord.com/users/73598582153805824/" class="fab fa-discord"></a> 
+            <a target="_blank" href="https://instagram.com/capotanerdola" class="fab fa-discord"></a> 
+        </div>
+
+
+        
     </div>
-    <div class="7button">
-     <div class="7button-text">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</div>
-    </div>
-    </div>
-      </div>
-     </div>
-      </div>
-</body>
-</html>
+
+
+       <div class="profile animate__animated animate__fadeInUp animate__fast">
+        <div class="banner">
+        <div class="banner">
+ <img src="images/2.jpg">  
+        </div>
+        </div>
+        <div class="pfp">
+            <a href="https://discord.gg/hellokittyy" target="_blank">
+        <img src="images/3.png" alt="Less">
+            </a>
+        </div>
+
+
+
+<div class="profile__content animate__animated animate__fadeInUp animate__fast">
+<h3> Less
+            </h3>
+  <span class="profile__tag">@tomeiscamm</span>
+            <p> <span class="aboutme__title"></span> <br> <br> <span class="aboutme__text"></span></p>
+        </div>
+
+
+        <div class="socials animate__animated animate__fadeInUp animate__fast">
+            <a target="_blank" href="https://discord.gg/hellokittyy" class="fab fa-discord"></a> 
+           
+            <a target="_blank" href="https://discord.gg/hellokittyy"></a> 
+        </div>
+
+
+         
+<script>
+ var rev = "fwd";
+    function titlebar(val){
+        var msg  = "Scammados";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+    </script>
+
+
+
+
+
+</div></body></html>
